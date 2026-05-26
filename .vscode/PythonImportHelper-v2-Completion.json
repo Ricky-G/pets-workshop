@@ -1,0 +1,423 @@
+[
+    {
+        "label": "validates",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "validates",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Breed",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Dog",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Dog",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Breed",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionStatus",
+        "importPath": "models.dog",
+        "description": "models.dog",
+        "isExtraImport": true,
+        "detail": "models.dog",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "to absolute import",
+        "importPath": "app import app  # Changed from relative",
+        "description": "app import app  # Changed from relative",
+        "isExtraImport": true,
+        "detail": "app import app  # Changed from relative",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "server.models.base",
+        "description": "server.models.base",
+        "peekOfCode": "class BaseModel(db.Model):\n    __abstract__ = True\n    @staticmethod\n    def validate_string_length(field_name, value, min_length=2, allow_none=False):\n        if value is None:\n            if allow_none:\n                return value\n            else:\n                raise ValueError(f\"{field_name} cannot be empty\")\n        if not isinstance(value, str):",
+        "detail": "server.models.base",
+        "documentation": {}
+    },
+    {
+        "label": "Breed",
+        "kind": 6,
+        "importPath": "server.models.breed",
+        "description": "server.models.breed",
+        "peekOfCode": "class Breed(BaseModel):\n    __tablename__ = 'breeds'\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False, unique=True)\n    description = db.Column(db.Text)\n    # Relationship with Dog model\n    dogs = relationship('Dog', backref='breed_info', lazy=True)\n    @validates('name')\n    def validate_name(self, key, name):\n        return self.validate_string_length('Breed name', name, min_length=2)",
+        "detail": "server.models.breed",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionStatus",
+        "kind": 6,
+        "importPath": "server.models.dog",
+        "description": "server.models.dog",
+        "peekOfCode": "class AdoptionStatus(Enum):\n    AVAILABLE = 'Available'\n    ADOPTED = 'Adopted'\n    PENDING = 'Pending'\nclass Dog(BaseModel):\n    __tablename__ = 'dogs'\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    breed_id = db.Column(db.Integer, db.ForeignKey('breeds.id'))\n    age = db.Column(db.Integer)",
+        "detail": "server.models.dog",
+        "documentation": {}
+    },
+    {
+        "label": "Dog",
+        "kind": 6,
+        "importPath": "server.models.dog",
+        "description": "server.models.dog",
+        "peekOfCode": "class Dog(BaseModel):\n    __tablename__ = 'dogs'\n    id = db.Column(db.Integer, primary_key=True)\n    name = db.Column(db.String(100), nullable=False)\n    breed_id = db.Column(db.Integer, db.ForeignKey('breeds.id'))\n    age = db.Column(db.Integer)\n    gender = db.Column(db.String(10))\n    description = db.Column(db.Text)\n    # Adoption status\n    status = db.Column(db.Enum(AdoptionStatus), default=AdoptionStatus.AVAILABLE)",
+        "detail": "server.models.dog",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "kind": 2,
+        "importPath": "server.utils.seed_database",
+        "description": "server.utils.seed_database",
+        "peekOfCode": "def create_app():\n    \"\"\"Create and configure Flask app for database operations\"\"\"\n    app = Flask(__name__)\n    # Get the server directory path (one level up from utils)\n    server_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(server_dir, \"dogshelter.db\")}'\n    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\n    # Initialize the database with the app\n    init_db(app)\n    return app",
+        "detail": "server.utils.seed_database",
+        "documentation": {}
+    },
+    {
+        "label": "create_breeds",
+        "kind": 2,
+        "importPath": "server.utils.seed_database",
+        "description": "server.utils.seed_database",
+        "peekOfCode": "def create_breeds():\n    \"\"\"Seed the database with breeds from the CSV file\"\"\"\n    app = create_app()\n    # Path to the CSV file\n    csv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), \n                           'models', 'breeds.csv')\n    with app.app_context():\n        # Check if breeds already exist\n        existing_breeds = Breed.query.count()\n        if existing_breeds > 0:",
+        "detail": "server.utils.seed_database",
+        "documentation": {}
+    },
+    {
+        "label": "create_dogs",
+        "kind": 2,
+        "importPath": "server.utils.seed_database",
+        "description": "server.utils.seed_database",
+        "peekOfCode": "def create_dogs():\n    \"\"\"Seed the database with dogs from the CSV file, ensuring at least 3 dogs per breed\"\"\"\n    app = create_app()\n    # Path to the CSV file\n    csv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), \n                           'models', 'dogs.csv')\n    with app.app_context():\n        # Check if dogs already exist\n        existing_dogs = Dog.query.count()\n        if existing_dogs > 0:",
+        "detail": "server.utils.seed_database",
+        "documentation": {}
+    },
+    {
+        "label": "seed_database",
+        "kind": 2,
+        "importPath": "server.utils.seed_database",
+        "description": "server.utils.seed_database",
+        "peekOfCode": "def seed_database():\n    \"\"\"Run all seeding functions in the correct order\"\"\"\n    create_breeds()\n    create_dogs()\nif __name__ == '__main__':\n    seed_database()",
+        "detail": "server.utils.seed_database",
+        "documentation": {}
+    },
+    {
+        "label": "get_dogs",
+        "kind": 2,
+        "importPath": "server.app",
+        "description": "server.app",
+        "peekOfCode": "def get_dogs() -> Response:\n    query = db.session.query(\n        Dog.id, \n        Dog.name, \n        Breed.name.label('breed')\n    ).join(Breed, Dog.breed_id == Breed.id)\n    dogs_query = query.all()\n    # Convert the result to a list of dictionaries\n    dogs_list: List[Dict[str, Any]] = [\n        {",
+        "detail": "server.app",
+        "documentation": {}
+    },
+    {
+        "label": "get_dog",
+        "kind": 2,
+        "importPath": "server.app",
+        "description": "server.app",
+        "peekOfCode": "def get_dog(id: int) -> tuple[Response, int] | Response:\n    # Query the specific dog by ID and join with breed to get breed name\n    dog_query = db.session.query(\n        Dog.id,\n        Dog.name,\n        Breed.name.label('breed'),\n        Dog.age,\n        Dog.description,\n        Dog.gender,\n        Dog.status",
+        "detail": "server.app",
+        "documentation": {}
+    },
+    {
+        "label": "get_dog_by_name",
+        "kind": 2,
+        "importPath": "server.app",
+        "description": "server.app",
+        "peekOfCode": "def get_dog_by_name(name: str) -> tuple[Response, int] | Response:\n    name = name.strip()\n    if not name:\n        return jsonify({\"error\": \"Dog name cannot be empty\"}), 400\n    if len(name) > 100:\n        return jsonify({\"error\": \"Dog name must be 100 characters or fewer\"}), 400\n    if not re.match(r\"^[A-Za-z\\s\\-']+$\", name):\n        return jsonify({\"error\": \"Dog name contains invalid characters\"}), 400\n    dog_query = db.session.query(\n        Dog.id,",
+        "detail": "server.app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_DATABASE_URI']",
+        "kind": 5,
+        "importPath": "server.app",
+        "description": "server.app",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(base_dir, \"dogshelter.db\")}'\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\n# Initialize the database with the app\ninit_db(app)\n@app.route('/api/dogs', methods=['GET'])\ndef get_dogs() -> Response:\n    query = db.session.query(\n        Dog.id, \n        Dog.name, \n        Breed.name.label('breed')",
+        "detail": "server.app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_TRACK_MODIFICATIONS']",
+        "kind": 5,
+        "importPath": "server.app",
+        "description": "server.app",
+        "peekOfCode": "app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\n# Initialize the database with the app\ninit_db(app)\n@app.route('/api/dogs', methods=['GET'])\ndef get_dogs() -> Response:\n    query = db.session.query(\n        Dog.id, \n        Dog.name, \n        Breed.name.label('breed')\n    ).join(Breed, Dog.breed_id == Breed.id)",
+        "detail": "server.app",
+        "documentation": {}
+    },
+    {
+        "label": "TestApp",
+        "kind": 6,
+        "importPath": "server.test_app",
+        "description": "server.test_app",
+        "peekOfCode": "class TestApp(unittest.TestCase):\n    def setUp(self):\n        # Create a test client using Flask's test client\n        self.app = app.test_client()\n        self.app.testing = True\n        # Turn off database initialization for tests\n        app.config['TESTING'] = True\n    def _create_mock_dog(self, dog_id, name, breed):\n        \"\"\"Helper method to create a mock dog with standard attributes\"\"\"\n        dog = MagicMock(spec=['to_dict', 'id', 'name', 'breed'])",
+        "detail": "server.test_app",
+        "documentation": {}
+    }
+]

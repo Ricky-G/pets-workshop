@@ -43,3 +43,5 @@ htmlcov/
 client/test-results/
 client/playwright-report/
 .azure
+
+.github/personal

@@ -92,5 +92,77 @@ class TestApp(unittest.TestCase):
         self.assertEqual(set(data[0].keys()), {'id', 'name', 'breed'})
 
 
+    def _create_mock_dog_full(self, dog_id, name, breed, age, description, gender, status):
+        """Helper to create a mock dog with full detail attributes"""
+        from unittest.mock import PropertyMock
+        dog = MagicMock()
+        dog.id = dog_id
+        dog.name = name
+        dog.breed = breed
+        dog.age = age
+        dog.description = description
+        dog.gender = gender
+        dog.status.name = status
+        return dog
+
+    def _setup_name_query_mock(self, mock_query, dog):
+        """Helper to configure the query mock for get_dog_by_name (uses .first())"""
+        mock_instance = MagicMock()
+        mock_query.return_value = mock_instance
+        mock_instance.join.return_value = mock_instance
+        mock_instance.filter.return_value = mock_instance
+        mock_instance.first.return_value = dog
+        return mock_instance
+
+    @patch('app.db.session.query')
+    def test_get_dog_by_name_success(self, mock_query):
+        """Test successful retrieval of a dog by name"""
+        mock_dog = self._create_mock_dog_full(1, "Buddy", "Labrador", 3, "Friendly dog", "Male", "AVAILABLE")
+        self._setup_name_query_mock(mock_query, mock_dog)
+
+        response = self.app.get('/api/dogs/name/Buddy')
+
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertEqual(data['id'], 1)
+        self.assertEqual(data['name'], "Buddy")
+        self.assertEqual(data['breed'], "Labrador")
+        self.assertEqual(data['age'], 3)
+        self.assertEqual(data['gender'], "Male")
+        self.assertEqual(data['status'], "AVAILABLE")
+
+    @patch('app.db.session.query')
+    def test_get_dog_by_name_not_found(self, mock_query):
+        """Test 404 response when dog name does not exist"""
+        self._setup_name_query_mock(mock_query, None)
+
+        response = self.app.get('/api/dogs/name/Unknown')
+
+        self.assertEqual(response.status_code, 404)
+        data = json.loads(response.data)
+        self.assertIn('error', data)
+
+    def test_get_dog_by_name_too_long(self):
+        """Test 400 response when name exceeds 100 characters"""
+        long_name = 'A' * 101
+        response = self.app.get(f'/api/dogs/name/{long_name}')
+
+        self.assertEqual(response.status_code, 400)
+        data = json.loads(response.data)
+        self.assertIn('error', data)
+
+    @patch('app.db.session.query')
+    def test_get_dog_by_name_case_insensitive(self, mock_query):
+        """Test that name lookup is case-insensitive"""
+        mock_dog = self._create_mock_dog_full(1, "Buddy", "Labrador", 3, "Friendly dog", "Male", "AVAILABLE")
+        self._setup_name_query_mock(mock_query, mock_dog)
+
+        response = self.app.get('/api/dogs/name/buddy')
+
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertEqual(data['name'], "Buddy")
+
+
 if __name__ == '__main__':
     unittest.main()

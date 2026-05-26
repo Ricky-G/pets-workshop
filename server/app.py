@@ -1,4 +1,5 @@
 import os
+import re
 from typing import Dict, List, Any, Optional
 from flask import Flask, jsonify, Response
 from models import init_db, db, Dog, Breed
@@ -65,7 +66,45 @@ def get_dog(id: int) -> tuple[Response, int] | Response:
     
     return jsonify(dog)
 
-## HERE
+
+@app.route('/api/dogs/name/<string:name>', methods=['GET'])
+def get_dog_by_name(name: str) -> tuple[Response, int] | Response:
+    name = name.strip()
+
+    if not name:
+        return jsonify({"error": "Dog name cannot be empty"}), 400
+
+    if len(name) > 100:
+        return jsonify({"error": "Dog name must be 100 characters or fewer"}), 400
+
+    if not re.match(r"^[A-Za-z\s\-']+$", name):
+        return jsonify({"error": "Dog name contains invalid characters"}), 400
+
+    dog_query = db.session.query(
+        Dog.id,
+        Dog.name,
+        Breed.name.label('breed'),
+        Dog.age,
+        Dog.description,
+        Dog.gender,
+        Dog.status
+    ).join(Breed, Dog.breed_id == Breed.id).filter(Dog.name.ilike(name)).first()
+
+    if not dog_query:
+        return jsonify({"error": "Dog not found"}), 404
+
+    dog: Dict[str, Any] = {
+        'id': dog_query.id,
+        'name': dog_query.name,
+        'breed': dog_query.breed,
+        'age': dog_query.age,
+        'description': dog_query.description,
+        'gender': dog_query.gender,
+        'status': dog_query.status.name
+    }
+
+    return jsonify(dog)
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5100) # Port 5100 to avoid macOS conflicts
