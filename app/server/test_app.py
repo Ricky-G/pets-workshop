@@ -101,6 +101,56 @@ class TestApp(unittest.TestCase):
         self.assertEqual(len(data['dogs']), 1)
         self.assertEqual(set(data['dogs'][0].keys()), {'id', 'name', 'breed'})
 
+    @patch('app.db.session.query')
+    def test_get_dog_by_name_success(self, mock_query):
+        """Test successful retrieval of a dog by name"""
+        mock_query_instance = MagicMock()
+        mock_query.return_value = mock_query_instance
+        mock_query_instance.join.return_value = mock_query_instance
+        mock_query_instance.filter.return_value = mock_query_instance
+
+        mock_dog = MagicMock(spec=['id', 'name', 'breed', 'age', 'description', 'gender', 'status'])
+        mock_dog.id = 1
+        mock_dog.name = 'Buddy'
+        mock_dog.breed = 'Labrador'
+        mock_dog.age = 3
+        mock_dog.description = 'Friendly dog'
+        mock_dog.gender = 'Male'
+        mock_dog.status = MagicMock(name='AVAILABLE')
+        mock_dog.status.name = 'AVAILABLE'
+        mock_query_instance.first.return_value = mock_dog
+
+        response = self.app.get('/api/dogs/name/Buddy')
+
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertEqual(data['name'], 'Buddy')
+        self.assertEqual(data['breed'], 'Labrador')
+        self.assertEqual(data['status'], 'AVAILABLE')
+
+    @patch('app.db.session.query')
+    def test_get_dog_by_name_not_found(self, mock_query):
+        """Test retrieval by name when no dog exists"""
+        mock_query_instance = MagicMock()
+        mock_query.return_value = mock_query_instance
+        mock_query_instance.join.return_value = mock_query_instance
+        mock_query_instance.filter.return_value = mock_query_instance
+        mock_query_instance.first.return_value = None
+
+        response = self.app.get('/api/dogs/name/UnknownDog')
+
+        self.assertEqual(response.status_code, 404)
+        data = json.loads(response.data)
+        self.assertEqual(data['error'], 'Dog not found')
+
+    def test_get_dog_by_name_empty_name(self):
+        """Test retrieval by name with empty/whitespace input"""
+        response = self.app.get('/api/dogs/name/%20%20')
+
+        self.assertEqual(response.status_code, 400)
+        data = json.loads(response.data)
+        self.assertEqual(data['error'], 'Dog name is required')
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,5 +1,5 @@
 import os
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any
 from flask import Flask, jsonify, request, Response
 from models import init_db, db, Dog, Breed
 
@@ -77,7 +77,36 @@ def get_dog(id: int) -> tuple[Response, int] | Response:
     
     return jsonify(dog)
 
-## HERE
+@app.route('/api/dogs/name/<string:name>', methods=['GET'])
+def get_dog_by_name(name: str) -> tuple[Response, int] | Response:
+    normalized_name = name.strip()
+    if not normalized_name:
+        return jsonify({"error": "Dog name is required"}), 400
+
+    dog_query = db.session.query(
+        Dog.id,
+        Dog.name,
+        Breed.name.label('breed'),
+        Dog.age,
+        Dog.description,
+        Dog.gender,
+        Dog.status
+    ).join(Breed, Dog.breed_id == Breed.id).filter(db.func.lower(Dog.name) == normalized_name.lower()).first()
+
+    if not dog_query:
+        return jsonify({"error": "Dog not found"}), 404
+
+    dog: Dict[str, Any] = {
+        'id': dog_query.id,
+        'name': dog_query.name,
+        'breed': dog_query.breed,
+        'age': dog_query.age,
+        'description': dog_query.description,
+        'gender': dog_query.gender,
+        'status': dog_query.status.name
+    }
+
+    return jsonify(dog)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5100) # Port 5100 to avoid macOS conflicts
