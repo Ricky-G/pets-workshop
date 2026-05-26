@@ -61,7 +61,7 @@ Let's create a Copilot instructions file. We'll start by asking Copilot to gener
 
     ## Frontend
 
-    - Built using Astro and Svelte
+    - Built using Astro
     - TypeScript should use arrow functions rather than the function keyword
     - Pages should be in dark mode with a modern look and feel
     ```

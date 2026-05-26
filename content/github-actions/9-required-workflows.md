@@ -98,8 +98,8 @@ Let's verify the ruleset is working.
 
     ```bash
     git checkout -b test-ruleset
-    echo "# test change" >> server/app.py
-    git add server/app.py
+    echo "# test change" >> app/server/app.py
+    git add app/server/app.py
     git commit -m "Test ruleset enforcement"
     git push -u origin test-ruleset
     ```

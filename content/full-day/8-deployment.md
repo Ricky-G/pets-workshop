@@ -17,7 +17,7 @@ With the prototype built, the shelter is ready to begin gathering feedback from 
 To streamline the process, we're going to work directly with the **main** branch. Let's change back to the **main** branch and obtain the updates we pushed previously.
 
 1. Return to your codespace, or reopen it by navigating to your repository and selecting **Code** > **Codespaces** and the name of your codespace.
-2. Open a new terminal window by selecting <kbd>Ctl</kbd>+<kbd>Shift</kbd>+<kbd>`</kbd>.
+2. Open a new terminal window by selecting <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>`</kbd>.
 3. Run the following commands to checkout the main branch and obtain the updates from the repository:
 
     ```sh
@@ -33,7 +33,7 @@ Creating and setting up the credentials is typically a task performed by adminis
 
 ## Asking Azure how to deploy to Azure
 
-We previously talked about [extensions for GitHub Copilot chat][extensions-copilot-chat], which allow you to interact with external services. These external services could provide access to information about your DevOps flow, database, and other resources. One such extension is the [Azure extension][azure-copilot-extension], which as the name implies allows you to interact with Azure. You can use the extension to get advice on how to deploy your application, check the status of services, and perform other operations. We'll use this extension to ask how to deploy our application.
+GitHub Copilot chat supports [extensions][extensions-copilot-chat], which allow you to interact with external services. These external services could provide access to information about your DevOps flow, database, and other resources. One such extension is the [Azure extension][azure-copilot-extension], which as the name implies allows you to interact with Azure. You can use the extension to get advice on how to deploy your application, check the status of services, and perform other operations. We'll use this extension to ask how to deploy our application.
 
 As we've done with other tasks, we don't have a specific prompt to use when talking with Azure, as part of the experience is to learn how best to interact with GitHub Copilot. The requirements for the deployment are:
 

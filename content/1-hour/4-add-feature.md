@@ -17,7 +17,7 @@ With Copilot Edits, you will add the files which need to be updated to the conte
 
 ## Add the filters to the dog list page
 
-Adding the filters to the page will require updating a minimum of two files - the Flask backend and the Svelte frontend. Fortunately, Copilot Edits can update multiple files! Let's get our page updated with the help of Copilot Edits.
+Adding the filters to the page will require updating a minimum of two files - the Flask backend and the Astro frontend. Fortunately, Copilot Edits can update multiple files! Let's get our page updated with the help of Copilot Edits.
 
 > [!NOTE]
 > Because Copilot Edits works best with auto-save enabled, we'll activate it. As we'll explore a little later in this exercise, Copilot Edits provides powerful tools to undo any changes you might not wish to keep.
@@ -29,7 +29,7 @@ Adding the filters to the page will require updating a minimum of two files - th
 5. Switch to edit mode by selecting **Edit** in the chat mode dropdown at the bottom of Chat view (should be currently **Ask**)
 6. If available, select **Claude 3.5 Sonnet** from the list of available models
 7. Select **Add Context...** in the chat window.
-8. Select **server/app.py** and **client/src/components/DogList.svelte** files (you need to select **Add context** for each file) 
+8. Select **app/server/app.py** and **app/client/src/components/DogList.astro** files (you need to select **Add context** for each file) 
 > [!TIP]
 > If you type the file names after clicking **Add context**, they will show up in the filter. You can also drag the files or right click file in explorer and select `Copilot -> Add File to Chat`)
 9. Ask Copilot to generate the update you want to the page, which is to add filters for both dog breed and if dogs are available for adoption. Use your own phrasing, ensuring the following requirements are met:
@@ -65,7 +65,7 @@ And
 
 1. Review the code suggestions to ensure they behave the way you expect them to, making any necessary changes. Once you're satisfied, you can select **Keep** on the files individually or in Copilot Chat to accept all changes.
 2. Open the page at [http://localhost:4321][tailspin-shelter-website] to see the updates!
-3. Run the Python tests by using `python -m unittest` in the terminal as you did previously.
+3. Run the Python tests by running `python -m unittest` from the `app/server` directory in the terminal.
 4. If any changes are needed, explain the required updates to GitHub Copilot and allow it to generate the new code.
 
 > [!IMPORTANT]

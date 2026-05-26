@@ -73,7 +73,6 @@ Before rebuilding the container, let's add **GitHub.copilot** to the list of ext
                 "ms-azuretools.vscode-azure-github-copilot",
 				"alexcvzz.vscode-sqlite",
 				"astro-build.astro-vscode",
-				"svelte.svelte-vscode",
 				"ms-python.python",
 				"ms-python.vscode-pylance"
 			]
@@ -86,22 +85,21 @@ Before rebuilding the container, let's add **GitHub.copilot** to the list of ext
     ```json
     "forwardPorts": [
 		4321,
-		5100,
-		5000
+		5100
 	],
     ```
 
 6. Just below the list of ports, add the command to run the startup script to the container definition:
 
     ```json
-    "postStartCommand": "chmod +x /workspaces/dog-shelter/scripts/start-app.sh && /workspaces/dog-shelter/scripts/start-app.sh",
+    "postStartCommand": "chmod +x /workspaces/pets-workshop/app/scripts/start-app.sh && /workspaces/pets-workshop/app/scripts/start-app.sh",
     ```
 
 You've now defined a custom container!
 
 ## Use the newly defined custom container
 
-Whenever someone uses the codespace you defined they'll have an environment with Node.js and Mongo DB, and the GitHub Copilot extension installed. Let's use this container!
+Whenever someone uses the codespace you defined they'll have an environment with Node.js and SQLite, and the GitHub Copilot extension installed. Let's use this container!
 
 1. Access the Command Palette (<kbd>F1</kbd> or clicking ☰ → View → Command Palette), then start typing **dev container**.
 1. Type **rebuild** and select **Codespaces: Rebuild container**.
@@ -119,7 +117,7 @@ Custom containers for GitHub Codespaces become part of the source code for the r
 > [!IMPORTANT]
 > For purposes of this exercise we are pushing code updates directly to `main`, our default branch. Normally you would follow the [GitHub flow][github-flow], which we will do in a [later exercise][github-flow-exercise].
 
-1. Open a new terminal window in the codespace by selecting <kbd>Ctl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd> or clicking ☰ → View → Terminal.
+1. Open a new terminal window in the codespace by selecting <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd> or clicking ☰ → View → Terminal.
 2. Find the issue number for defining the codespace by entering the following command:
 
     ```bash

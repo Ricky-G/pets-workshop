@@ -49,7 +49,7 @@ Our project needs two main updates. We want to make the updates to support devel
     | Add filters to dog list | Add the code to allow users to filter for dogs by breed and availability       |
 
 > [!TIP]
-> You can also save an issue by pressing <kbd>Ctl</kbd> - <kbd>Enter</kbd> (or <kbd>Cmd</kbd> - <kbd>Return</kbd> on a Mac) in the title or description fields.
+> You can also save an issue by pressing <kbd>Ctrl</kbd> - <kbd>Enter</kbd> (or <kbd>Cmd</kbd> - <kbd>Return</kbd> on a Mac) in the title or description fields.
 
 You've now defined all the issues for the workshop! You'll use these issues to help guide your progress through the workshop.
 

@@ -32,7 +32,7 @@ In a few moments a new repository will be created from the template for this wor
 
 With the repository created, it's now time to clone the repository locally. We'll do this from a shell capable of running BASH commands.
 
-1. Copy the URL for the repository you just created in the prior set.
+1. Copy the URL for the repository you just created in the prior step.
 2. Open your terminal or command shell.
 3. Run the following command to clone the repository locally (changing directories to a parent directory as appropriate):
 
@@ -51,25 +51,25 @@ With the repository created, it's now time to clone the repository locally. We'l
     - macOS / Linux:
 
         ```sh
-        ./scripts/start-app.sh
+        ./app/scripts/start-app.sh
         ```
 
     - Windows (PowerShell):
 
         ```powershell
-        ./scripts/start-app.ps1
+        ./app/scripts/start-app.ps1
         ```
 
     If you encounter execution policy warnings on Windows, run PowerShell as an administrator or execute the script with an explicit bypass, for example:
 
     ```powershell
-    powershell -ExecutionPolicy Bypass -File .\scripts\start-app.ps1
+    powershell -ExecutionPolicy Bypass -File .\app\scripts\start-app.ps1
     ```
 
 The startup script will start two applications:
 
 - The backend Flask app on [localhost:5100][flask-url]. You can see a list of dogs by opening the [dogs API][dogs-api].
-- The frontend Astro/Svelte app on [localhost:4321][astro-url]. You can see the [website][website-url] by opening that URL.
+- The frontend Astro app on [localhost:4321][astro-url]. You can see the [website][website-url] by opening that URL.
 
 ## Open your editor
 

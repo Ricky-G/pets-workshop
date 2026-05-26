@@ -59,7 +59,7 @@ The e2e job has two dependencies to cache — Python packages and the Node modul
             with:
               node-version: '20'
               cache: 'npm'
-              cache-dependency-path: 'client/package-lock.json'
+              cache-dependency-path: 'app/client/package-lock.json'
     ```
 
 3. Save the file.

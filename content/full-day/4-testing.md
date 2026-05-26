@@ -21,7 +21,7 @@ Let's take a look at the tests defined for the project.
 > There are only a few tests defined for this project. Many projects will have hundreds or thousands of tests to ensure reliability.
 
 1. Return to your codespace, or reopen it by navigating to your repository and selecting **Code** > **Codespaces** and the name of your codespace.
-2. In **Explorer**, navigate to **server** and open **test_app.py**.
+2. In **Explorer**, navigate to **app** > **server** and open **test_app.py**.
 3. Open GitHub Copilot Chat and ask for an explanation of the file.
 
 > [!NOTE]
@@ -66,32 +66,32 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'server/**'
+      - 'app/server/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'server/**'
+      - 'app/server/**'
 
 jobs:
   server-test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
         
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f server/requirements.txt ]; then pip install -r server/requirements.txt; fi
+        if [ -f app/server/requirements.txt ]; then pip install -r app/server/requirements.txt; fi
         pip install pytest
         
     - name: Run tests
-      working-directory: ./server
+      working-directory: ./app/server
       run: |
         python -m pytest test_app.py -v
 ```
@@ -109,7 +109,7 @@ With the workflow created, let's push it to the repository. Typically you would 
 > [!NOTE]
 > All commands are entered using the terminal window in the codespace.
 
-1. Use the open terminal window in your codespace, or open it (if necessary) by pressing <kbd>Ctl</kbd> + <kbd>`</kbd>.
+1. Use the open terminal window in your codespace, or open it (if necessary) by pressing <kbd>Ctrl</kbd> + <kbd>`</kbd>.
 1. List all issues for the repository by entering the following command in the terminal window:
 
     ```bash

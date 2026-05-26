@@ -67,12 +67,12 @@ Let's create a composite action that sets up Python, installs dependencies, and 
             python-version: ${{ inputs.python-version }}
 
         - name: Install dependencies
-          run: pip install -r server/requirements.txt
+          run: pip install -r app/server/requirements.txt
           shell: bash
 
         - name: Seed the database
           id: seed
-          run: python server/utils/seed_database.py
+          run: python app/server/utils/seed_database.py
           shell: bash
           env:
             DATABASE_PATH: ${{ inputs.database-path }}
@@ -117,7 +117,7 @@ Now let's update the CI workflow to use the custom action instead of the individ
     ```yaml
           - name: Run tests
             run: python -m unittest test_app -v
-            working-directory: ./server
+            working-directory: ./app/server
             env:
               DATABASE_PATH: ${{ steps.seed.outputs.database-file }}
     ```
@@ -136,7 +136,7 @@ Now let's update the CI workflow to use the custom action instead of the individ
 
     ```yaml
           - name: Run e2e tests
-            working-directory: ./client
+            working-directory: ./app/client
             run: npx playwright test
             env:
               DATABASE_PATH: ${{ steps.seed.outputs.database-file }}
@@ -176,7 +176,7 @@ Now let's update the CI workflow to use the custom action instead of the individ
 
           - name: Run tests
             run: python -m unittest test_app -v
-            working-directory: ./server
+            working-directory: ./app/server
             env:
               DATABASE_PATH: ${{ steps.seed.outputs.database-file }}
 
@@ -197,18 +197,18 @@ Now let's update the CI workflow to use the custom action instead of the individ
             with:
               node-version: '20'
               cache: 'npm'
-              cache-dependency-path: 'client/package-lock.json'
+              cache-dependency-path: 'app/client/package-lock.json'
 
           - name: Install Node dependencies
-            working-directory: ./client
+            working-directory: ./app/client
             run: npm ci
 
           - name: Install Playwright browsers
-            working-directory: ./client
+            working-directory: ./app/client
             run: npx playwright install --with-deps chromium
 
           - name: Run e2e tests
-            working-directory: ./client
+            working-directory: ./app/client
             run: npx playwright test
             env:
               DATABASE_PATH: ${{ steps.seed.outputs.database-file }}

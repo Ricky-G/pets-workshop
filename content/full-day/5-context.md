@@ -11,7 +11,7 @@ Before adding new functionality to the website, you want to explore the existing
 
 ## Getting started with GitHub Copilot
 
-GitHub Copilot is a cloud-based service offered for both individuals and businesses. As an individual, you can [sign up for a free account][copilot-signup] of the service. After enrolling you will typically install the extension for your IDE, which is available for [Visual Studio][copilot-vs], [Visual Studio Code][copilot-vscode], [NeoVIM][copilot-vim], the [JetBrains IDEs][copilot-jetbrains], [XCode](copilot-xcode) and [Eclipse][copilot-eclipse]. Because we'll be using the [Codespace][walkthrough-codespaces] you defined in the previous exercise, you won't need to manually install the extension - you did that when you configured the dev container!
+GitHub Copilot is a cloud-based service offered for both individuals and businesses. As an individual, you can [sign up for a free account][copilot-signup] of the service. After enrolling you will typically install the extension for your IDE, which is available for [Visual Studio][copilot-vs], [Visual Studio Code][copilot-vscode], [NeoVIM][copilot-vim], the [JetBrains IDEs][copilot-jetbrains], [XCode][copilot-xcode] and [Eclipse][copilot-eclipse]. Because we'll be using the [Codespace][walkthrough-codespaces] you defined in the previous exercise, you won't need to manually install the extension - you did that when you configured the dev container!
 
 1. If you don't already have access to GitHub Copilot, [sign up for a free trial][copilot-signup].
 2. In the [previous exercise][walkthrough-codespaces] you configured your [devcontainer][devcontainer-docs] to automatically install the extension for GitHub Copilot, so you're all set and ready to go!
@@ -75,12 +75,12 @@ This is an application to allow people to look for dogs to adopt. It is built in
 ## Backend
 
 - Built using Flask and SQLAlchemy
-- All routes require unit tests, which are created in *test_file.py* in the same folder as the file
+- All routes require unit tests, which are created in *test_app.py* in the same folder as the file
 - When creating tests, always mock database calls
 
 ## Frontend
 
-- Built using Astro and Svelte
+- Built using Astro
 - Pages should be in dark mode with a modern look and feel
 ```
 
@@ -118,13 +118,13 @@ Congratulations! You've explored context in GitHub Copilot, which is key to gene
 [copilot-prompt-files]: https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot?tool=vscode#about-prompt-files
 [copilot-personal-instructions]: https://docs.github.com/en/copilot/customizing-copilot/adding-personal-custom-instructions-for-github-copilot
 [copilot-signup]: https://github.com/github-copilot/signup
-[copilot-vim]: https://github.com/github/copilot.vim#getting-startedins.com/plugin/17718-github-copilot
+[copilot-vim]: https://github.com/github/copilot.vim#getting-started
 [copilot-vs]: https://marketplace.visualstudio.com/items?itemName=GitHub.copilotvs
 [copilot-vscode]: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
 [copilot-xcode]: https://github.com/github/CopilotForXcode
-[devcontainer-docs]: https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containersopilot/adding-personal-custom-instructions-for-github-copilot
+[devcontainer-docs]: https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers
 [vscode-copilot-chat]: https://code.visualstudio.com/docs/copilot/copilot-chat
-[walkthrough-codespaces]: ./3-codespaces.mdvisualstudio.com/docs/copilot/copilot-chat
+[walkthrough-codespaces]: ./3-codespaces.md
 [walkthrough-next]: 6-code.md
 [walkthrough-previous]: 4-testing.md
 

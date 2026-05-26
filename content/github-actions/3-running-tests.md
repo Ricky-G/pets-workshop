@@ -70,10 +70,10 @@ Let's build that out!
           - name: Install dependencies
             run: |
               python -m pip install --upgrade pip
-              pip install -r server/requirements.txt
+              pip install -r app/server/requirements.txt
 
           - name: Run tests
-            working-directory: ./server
+            working-directory: ./app/server
             run: |
               python -m unittest test_app -v
     ```
@@ -133,7 +133,7 @@ The unit tests cover the API, but the shelter also has Playwright e2e tests that
           - name: Install Python dependencies
             run: |
               python -m pip install --upgrade pip
-              pip install -r server/requirements.txt
+              pip install -r app/server/requirements.txt
 
           - name: Set up Node.js
             uses: actions/setup-node@v4
@@ -141,15 +141,15 @@ The unit tests cover the API, but the shelter also has Playwright e2e tests that
               node-version: '20'
 
           - name: Install Node dependencies
-            working-directory: ./client
+            working-directory: ./app/client
             run: npm ci
 
           - name: Install Playwright browsers
-            working-directory: ./client
+            working-directory: ./app/client
             run: npx playwright install --with-deps chromium
 
           - name: Run e2e tests
-            working-directory: ./client
+            working-directory: ./app/client
             run: npx playwright test
     ```
 

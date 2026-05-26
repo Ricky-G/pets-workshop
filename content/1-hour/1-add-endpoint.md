@@ -10,10 +10,10 @@ With code completions, GitHub Copilot provides suggestions in your code editor w
 
 It's standard to work in phases when adding functionality to an application. Given that we know we want to allow users to filter the list of dogs based on breed, we'll need to add an endpoint to provide a list of all breeds. Later we'll add the rest of the functionality, but let's focus on this part for now.
 
-The application uses a Flask app with SQLAlchemy as the backend API (in the [/server][server-code] folder), and an Astro app with Svelte as the frontend (in the [/client][client-code] folder). You will explore more of the project later; this exercise will focus solely on the Flask application.
+The application uses a Flask app with SQLAlchemy as the backend API (in the [app/server][server-code] folder), and an Astro app as the frontend (in the [app/client][client-code] folder). You will explore more of the project later; this exercise will focus solely on the Flask application.
 
 > [!NOTE]
-> As you begin making changes to the application, there is always a chance a breaking change could be created. If the page stops working, check the terminal window you used previously to start the application for any error messages. You can stop the app by using <kbd>Ctl</kbd>+<kbd>C</kbd>, and restart it by running the script appropriate for your operating system: `./scripts/start-app.sh` (macOS / Linux) or `./scripts/start-app.ps1` (Windows PowerShell).
+> As you begin making changes to the application, there is always a chance a breaking change could be created. If the page stops working, check the terminal window you used previously to start the application for any error messages. You can stop the app by using <kbd>Ctrl</kbd>+<kbd>C</kbd>, and restart it by running the script appropriate for your operating system: `./app/scripts/start-app.sh` (macOS / Linux) or `./app/scripts/start-app.ps1` (Windows PowerShell).
 
 ## Flask routes
 
@@ -33,8 +33,8 @@ Let's build our new route in our Flask backend with the help of code completion.
 > For this exercise, **DO NOT** copy and paste the code snippet provided, but rather type it manually. This will allow you to experience code completion as you would if you were coding back at your desk. You'll likely see you only have to type a few characters before GitHub Copilot begins suggesting the rest.
 
 1. Return to your IDE with the project open.
-2. Open **server/app.py**.
-3. Locate the comment which reads `## HERE`, which should be at line 68.
+2. Open **app/server/app.py**.
+3. Locate the comment which reads `## HERE`, which should be at line 80.
 4. Delete the comment to ensure there isn't any confusion for Copilot, and leave your cursor there.
 5. Begin adding the code to create the route to return all breeds from an endpoint of **api/breeds** by typing the following:
 
@@ -68,7 +68,7 @@ Let's build our new route in our Flask backend with the help of code completion.
 > [!IMPORTANT]
 > Because LLMs are probabilistic, not deterministic, the exact code generated can vary. The above is a representative example. If your code is different, that's just fine as long as it works!
 
-8. Add a comment to the newly created function. To do this, place your cursor inside the function (anywhere between the lines `def get_breeds...` and `return jsonify...`). Then, press <kbd>Ctl</kbd>+<kbd>I</kbd> (or <kbd>cmd</kbd>+<kbd>I</kbd> on a Mac) to open the editor inline chat. In the input box, type `/doc`. (You can optionally provide additional details, but it's not required). This will prompt GitHub Copilot to generate a documentation comment for the function. The suggested comment will appear inline in the code (highlighted in green). Click **Accept** to apply the comment to your code, or click **Close** to discard the suggestion. You just used a slash command, a shortcut to streamline a task, these commands eliminate the need for verbose prompts.
+8. Add a comment to the newly created function. To do this, place your cursor inside the function (anywhere between the lines `def get_breeds...` and `return jsonify...`). Then, press <kbd>Ctrl</kbd>+<kbd>I</kbd> (or <kbd>cmd</kbd>+<kbd>I</kbd> on a Mac) to open the editor inline chat. In the input box, type `/doc`. (You can optionally provide additional details, but it's not required). This will prompt GitHub Copilot to generate a documentation comment for the function. The suggested comment will appear inline in the code (highlighted in green). Click **Accept** to apply the comment to your code, or click **Close** to discard the suggestion. You just used a slash command, a shortcut to streamline a task, these commands eliminate the need for verbose prompts.
 
 9. **Save** the file.
 
@@ -94,13 +94,13 @@ You've added a new endpoint with the help of GitHub Copilot! You saw how Copilot
 |:-----------------------------------|------------------------------------------:|
 
 [breeds-endpoint]: http://localhost:5100/api/breeds
-[client-code]: /client/
+[client-code]: ../../app/client/
 [copilot-suggestions]: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot
 [flask-routing]: https://flask.palletsprojects.com/en/stable/quickstart/#routing
 [http-methods]: https://www.w3schools.com/tags/ref_httpmethods.asp
 [prompt-crafting]: https://code.visualstudio.com/docs/copilot/prompt-crafting
 [inline-chat]: https://code.visualstudio.com/docs/copilot/chat/inline-chat
-[server-code]: /server/
+[server-code]: ../../app/server/
 [vscode-copilot]: https://code.visualstudio.com/docs/copilot/ai-powered-suggestions
 [walkthrough-previous]: ./0-setup.md
 [walkthrough-next]: ./2-explore-project.md

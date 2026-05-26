@@ -28,7 +28,7 @@ A [branch][about-branches] is a copy of the code stored in the same repository. 
 There are different ways to create a branch when using [GitHub Codespaces][github-codespaces]. You can utilize the command-line to run [git](https://git-scm.com/docs/git-branch) commands. You can use the Source Control pane in your codespace to get the support of the UI for creating your branch. In our example we're going to use the command-line to create the branch.
 
 1. Return to your codespace, or reopen it by navigating to your repository and selecting **Code** > **Codespaces** and the name of your codespace.
-2. Open a **terminal window** by pressing <kbd>Ctl</kbd> + <kbd>`</kbd>.
+2. Open a **terminal window** by pressing <kbd>Ctrl</kbd> + <kbd>`</kbd>.
 3. In the terminal window, enter the following command to create and switch to a new branch named `add-filter`:
 
     ```bash
@@ -59,28 +59,28 @@ A [pull request][about-prs] is a request to pull or incorporate new code into th
 Pull requests can be made through the source control pane in the codespace, the repository's website, or through the command-line using the [GitHub CLI][github-cli]. In our example we're going to create the pull request in the CLI, then navigate to the website to see the pull request and the actions running, and merge the code into the codebase.
 
 1. Return to your codespace.
-1. Find the number for the [issue you created earlier][issues-exercise] titled **Add component to display hours** by entering the following command in the terminal window:
+1. Find the number for the [issue you created earlier][issues-exercise] titled **Add filters to dog list** by entering the following command in the terminal window:
 
     ```bash
     gh issue list
     ```
 
-1. Create a pull request with the title **Add hours component** and body **Resolves #\<ISSUE_NUMBER\>**, replacing **\<ISSUE_NUMBER\>** with the issue number you obtained in the previous step by entering the following command in the terminal window:
+1. Create a pull request with the title **Add dog list filters** and body **Resolves #\<ISSUE_NUMBER\>**, replacing **\<ISSUE_NUMBER\>** with the issue number you obtained in the previous step by entering the following command in the terminal window:
 
     ```bash
-    gh pr create -t "Add hours component" -b "Resolves #<ISSUE_NUMBER>"
+    gh pr create -t "Add dog list filters" -b "Resolves #<ISSUE_NUMBER>"
     ```
 
 ## Explore and merge the pull request
 
 When the pull request is created, you will see a link appear to the page for the pull request. From there you can add comments, see any workflows running, and decide to close or merge the pull request. You can also see any workflows associated with the pull request run.
 
-In our scenario, we created an automated workflow for front-end tests for our application, which runs whenever a push or pull request is made to `main`. We also enabled [code scanning][security-exercise], which was set to run on the same triggers. We've just created a pull request, which will cause both of those workflows to run!
+In our scenario, we created an automated workflow for server unit tests for our application, which runs whenever a push or pull request is made to `main`. We also enabled [code scanning][security-exercise], which was set to run on the same triggers. We've just created a pull request, which will cause both of those workflows to run!
 
 Let's explore the pull request and watch the workflows run. We'll ensure the tests now run successfully and, assuming they do, merge the pull request.
 
-1. Follow the link displayed in the terminal window by using <kbd>Ctl</kbd> - **Click** (or <kbd>Cmd</kbd> - **Click** on a Mac).
-1. In the page displayed, note the workflow running the [end-to-end tests created earlier][testing-exercise] and [code scanning][security-exercise].
+1. Follow the link displayed in the terminal window by using <kbd>Ctrl</kbd> - **Click** (or <kbd>Cmd</kbd> - **Click** on a Mac).
+1. In the page displayed, note the workflow running the [unit tests created earlier][testing-exercise] and [code scanning][security-exercise].
 1. When the workflows complete successfully, select **Merge pull request** to merge your changes into the **main** branch.
 
 Congratulations! You've now used the GitHub flow to suggest changes, perform a review, and merge those into your codebase.
