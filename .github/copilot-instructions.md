@@ -70,5 +70,5 @@ Detailed rules are in `.github/instructions/python-flask-best-practices.instruct
 - **Seed database**: use scripts in `scripts/` (`seed-database.ps1` / `seed-database.sh`)
 
 ## Code Reviews
-- Follow the conventions outlined in this document and the linked instruction files.
-- The code review instruction are located in code-review.md
+- For every code review, follow the [repository code review guidelines](code-review.md).
+- Apply the conventions in this document and the relevant instruction files in addition to those guidelines.
