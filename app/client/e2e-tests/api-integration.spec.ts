@@ -9,6 +9,7 @@ test.describe('API Integration', () => {
 
     await expect(page.getByTestId('dog-name').nth(0)).toHaveText('Buddy');
     await expect(page.getByTestId('dog-breed').nth(0)).toHaveText('Golden Retriever');
+    await expect(page.getByTestId('dog-status').nth(0)).toHaveText('Available');
 
     await expect(page.getByTestId('dog-name').nth(1)).toHaveText('Luna');
     await expect(page.getByTestId('dog-breed').nth(1)).toHaveText('Husky');

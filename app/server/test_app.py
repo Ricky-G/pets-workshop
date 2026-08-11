@@ -12,12 +12,13 @@ class TestApp(unittest.TestCase):
         # Turn off database initialization for tests
         app.config['TESTING'] = True
         
-    def _create_mock_dog(self, dog_id, name, breed):
+    def _create_mock_dog(self, dog_id, name, breed, status="AVAILABLE"):
         """Helper method to create a mock dog with standard attributes"""
-        dog = MagicMock(spec=['to_dict', 'id', 'name', 'breed'])
+        dog = MagicMock(spec=['to_dict', 'id', 'name', 'breed', 'status'])
         dog.id = dog_id
         dog.name = name
         dog.breed = breed
+        dog.status.name = status
         dog.to_dict.return_value = {'id': dog_id, 'name': name, 'breed': breed}
         return dog
         
@@ -57,6 +58,7 @@ class TestApp(unittest.TestCase):
         self.assertEqual(data['dogs'][0]['id'], 1)
         self.assertEqual(data['dogs'][0]['name'], "Buddy")
         self.assertEqual(data['dogs'][0]['breed'], "Labrador")
+        self.assertEqual(data['dogs'][0]['status'], "AVAILABLE")
         
         # Verify second dog
         self.assertEqual(data['dogs'][1]['id'], 2)
@@ -99,7 +101,7 @@ class TestApp(unittest.TestCase):
         self.assertIn('total_pages', data)
         self.assertTrue(isinstance(data['dogs'], list))
         self.assertEqual(len(data['dogs']), 1)
-        self.assertEqual(set(data['dogs'][0].keys()), {'id', 'name', 'breed'})
+        self.assertEqual(set(data['dogs'][0].keys()), {'id', 'name', 'breed', 'status'})
 
 
     def _create_mock_dog_full(self, dog_id, name, breed, age, description, gender, status):
