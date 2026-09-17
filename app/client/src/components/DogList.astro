@@ -3,6 +3,7 @@ interface Dog {
   id: number;
   name: string;
   breed: string;
+  status: 'AVAILABLE' | 'PENDING' | 'ADOPTED';
 }
 
 interface Props {
@@ -30,7 +31,16 @@ const { dogs } = Astro.props;
           <div class="p-6 relative">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div class="relative z-10">
-              <h3 class="text-xl font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors" data-testid="dog-name">{dog.name}</h3>
+              <div class="flex justify-between items-start gap-3 mb-2">
+                <h3 class="text-xl font-semibold text-slate-100 group-hover:text-blue-400 transition-colors" data-testid="dog-name">{dog.name}</h3>
+                {dog.status === 'AVAILABLE' ? (
+                  <span class="bg-green-500/20 text-green-400 text-xs px-2.5 py-1 rounded-full whitespace-nowrap" data-testid="dog-status">Available</span>
+                ) : dog.status === 'PENDING' ? (
+                  <span class="bg-amber-500/20 text-amber-400 text-xs px-2.5 py-1 rounded-full whitespace-nowrap" data-testid="dog-status">Pending Adoption</span>
+                ) : (
+                  <span class="bg-red-500/20 text-red-400 text-xs px-2.5 py-1 rounded-full whitespace-nowrap" data-testid="dog-status">Adopted</span>
+                )}
+              </div>
               <p class="text-slate-400 mb-4" data-testid="dog-breed">{dog.breed}</p>
               <div class="mt-4 text-sm text-blue-400 font-medium flex items-center">
                 <span>View details</span>
